@@ -1,11 +1,13 @@
-FROM debian:8
+FROM debian:stretch-slim
 
 # less priviledge user, the id should map the user the downloaded files belongs to
-RUN groupadd -r dummy && useradd -r -g dummy dummy -u 1000
+RUN set -xe \
+  && groupadd -r dummy \
+  && useradd -r -g dummy dummy -u 1000
 
 # webui + aria2
-RUN apt-get update \
-	&& apt-get install -y aria2 busybox curl unzip \
+RUN apt-get update -qq \
+	&& apt-get install -yqq aria2 ca-certificates busybox curl unzip \
 	&& rm -rf /var/lib/apt/lists/*
 
 ADD ./docs /webui-aria2
