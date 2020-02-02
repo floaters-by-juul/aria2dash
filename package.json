@@ -1,9 +1,13 @@
 {
-  "name": "webui-aria2",
-  "version": "1.0.0",
-  "description": "The aim for this project is to create the worlds best and hottest interface to interact with aria2.",
-  "homepage": "https://github.com/ziahamza/webui-aria2#readme",
-  "license": "MIT",
+  "name": "aria2dash",
+  "version": "1.0.1",
+  "description": "Web dashboard for Aria2.",
+  "homepage": "https://github.com/floaters-by-juul/webui-aria2#readme",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Martin Juul",
+    "email": "code@juul.xyz"
+  },
   "scripts": {
     "dev": "webpack -d --watch --progress & node node-server",
     "build": "webpack -p --progress",
@@ -12,10 +16,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ziahamza/webui-aria2.git"
+    "url": "git+https://github.com/floaters-by-juul/webui-aria2.git"
   },
   "bugs": {
-    "url": "https://github.com/ziahamza/webui-aria2/issues"
+    "url": "https://github.com/floaters-by-juul/webui-aria2/issues"
   },
   "husky": {
     "hooks": {
